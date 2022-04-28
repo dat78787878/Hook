@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import Content from "./Content";
+import { ThemeContext } from "./ThemeContext";
+import "./App.css";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background-color: black;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+`;
 
 function App() {
+  const context = useContext(ThemeContext);
+  const home = "List item";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: 20 }}>
+      <StyledButton onClick={context.toggleTheme}>Toggle</StyledButton>
+      <Content home={home} />
     </div>
   );
 }
