@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Content from "./Content";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "./contexts/ThemeContext";
 import "./App.css";
 import styled from "styled-components";
 

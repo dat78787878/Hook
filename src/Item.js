@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
-import useFetch from "./useFetch";
+import { ThemeContext } from "./contexts/ThemeContext";
+import useFetch from "./hooks/useFetch";
 
 const Item = () => {
   const context = useContext(ThemeContext);
